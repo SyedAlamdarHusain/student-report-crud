@@ -1,42 +1,34 @@
-Video Tutorial of running the source code:
-https://youtu.be/oq2P988w-MQ
+# Video Tutorials
+- [Video Tutorial of running the source code](https://youtu.be/oq2P988w-MQ)
+- [Video Tutorial of running the application](https://www.youtube.com/watch?v=s5rXZN1cev4)
 
-Video Tutorial of running the application:
-https://www.youtube.com/watch?v=s5rXZN1cev4
-
-Installation and Setup:
-
-Prerequisites
+# Installation and Setup
+## Prerequisites
 Before starting, make sure you have the following software installed on your system:
+- MySQL
+- XAMPP
+- Python 3
+- Node.js
 
-MySQL
-XAMPP
-Python 3
-Node.js
-Database Setup
-Install MySQL: If you haven't already installed MySQL, download and install it from the official website.
+## Database Setup
+### Install MySQL
+If you haven't already installed MySQL, download and install it from the official website.
 
-XAMPP:
+### XAMPP
+1. Download and install XAMPP from the official website.
+2. Start Apache and MySQL from XAMPP:
+   - Launch XAMPP and start the Apache and MySQL services from the control panel.
+3. Access the Dashboard:
+   - Open your web browser and go to http://localhost/dashboard/ to access the XAMPP dashboard.
+4. Create a Database:
+   - In the XAMPP dashboard, navigate to the phpMyAdmin section.
+   - Click on "New" to create a new database called "studentreport."
 
-Download and install XAMPP from the official website.
-Start Apache and MySQL from XAMPP:
-
-Launch XAMPP and start the Apache and MySQL services from the control panel.
-Access the Dashboard:
-
-Open your web browser and go to http://localhost/dashboard/ to access the XAMPP dashboard.
-
-Create a Database:
-
-In the XAMPP dashboard, navigate to the phpMyAdmin section.
-Click on "New" to create a new database called "studentreport."
-
-
-IF YOU WISH TO RENAME DATABASE:
-
-The database could renamed to something else provided that change is implemented on the code on line:
-Go on App.py and navigate to the line 7 of code and change to /studentreport’ to something else if you wish to. 
+#### IF YOU WISH TO RENAME DATABASE:
+The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/studentreport` to something else if you wish to.
+```python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
+
 
 Run SQL Queries:
 
