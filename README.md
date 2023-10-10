@@ -123,7 +123,7 @@ Once all the libraries are installed, code is edited, and you are running on ven
 flask run
 ```
 
-# Version Management:
+# Version Dependencies:
 
 If you have error running flask make sure the libraries version matches the version on the requirements.txt
 
