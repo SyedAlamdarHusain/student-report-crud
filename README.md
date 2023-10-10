@@ -64,35 +64,43 @@ CREATE TABLE Enrollments (
     UNIQUE (StudentID, CourseID)
 );
 ```
+# Flask Setup
 
+## Navigate to the Flask Folder:
 
-Flask Setup
+Open a terminal or command prompt and navigate to the Flask project folder. Use the terminal for the IndividualAssignmentSource code.
 
-Navigate to the Flask Folder:
-
-Open a terminal or command prompt and navigate to the Flask project folder.
-Open terminal of IndividialAssignmentSource code
+```bash
 cd IndividualAssignmentSourceCode\Flask_React_Crud
+```
+
 Check If there a another folder Flask_React_Crud inside IndividualAssignmentSourceCode\Flask_React_Crud
 If there is then do:
+```bash
 IndividualAssignmentSourceCode\Flask_React_Crud\Flask_React_Crud
+```
 
-Create and Activate a Virtual Environment:
+# Create and Activate a Virtual Environment:
 
-Run the following commands in the terminal:
+## Run the following commands in the terminal:
+
+```bash
 py -3 -m venv venv
 venv\Scripts\activate
+```
 
-Install Python Libraries:
-Install the required Python libraries using pip:
+# Install Python Libraries:
+## Install the required Python libraries using pip:
 
+```bash
 pip install Flask
 pip install pymysql
 pip install -U Flask-SQLAlchemy
 pip install flask-marshmallow
 pip install Flask-Cors
+```
 
-Edit App.py code:
+# Edit App.py code:
 
 Go on App.py and navigate to the line 7 of code:
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
