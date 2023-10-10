@@ -27,14 +27,14 @@ If you haven't already installed MySQL, download and install it from the officia
    - Click on "New" to create a new database called "studentreportsyedhusain"
 
 #### IF YOU WISH TO RENAME DATABASE:
-The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/syedhusainstudentreport` to something else if you wish to.
+The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/studentreportsyedhusain` to something else if you wish to.
 ```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/syedhusainstudentreport'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreportsyedhusain'
 ```
 
 # Run SQL Queries:
 
-In the phpMyAdmin interface, select the "syedhusainstudentreport" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
+In the phpMyAdmin interface, select the "studentreportsyedhusain" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
 
 ```sql
 CREATE TABLE Students (
@@ -73,13 +73,13 @@ CREATE TABLE Enrollments (
 Open a terminal or command prompt and navigate to the Flask project folder. Use the terminal for the IndividualAssignmentSource code.
 
 ```bash
-cd IndividualAssignmentSourceCode\Flask_React_Crud
+cd IndividualAssignmentSyedHusain\Flask_React_Crud
 ```
 
 Check If there a another folder Flask_React_Crud inside IndividualAssignmentSourceCode\Flask_React_Crud
 If there is then do:
 ```bash
-IndividualAssignmentSourceCode\Flask_React_Crud\Flask_React_Crud
+cd IndividualAssignmentSyedHusain\Flask_React_Crud\Flask_React_Crud
 ```
 
 # Create and Activate a Virtual Environment:
@@ -107,7 +107,7 @@ pip install Flask-Cors
 Go on App.py and navigate to the line 7 of code:
 
 ```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreportsyedhusain'
 ```
 
 Change password after “root:” to your own password
