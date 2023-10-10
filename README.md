@@ -30,41 +30,40 @@ The database could be renamed to something else, provided that the change is imp
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
 ```
 
+# Run SQL Queries:
 
-Run SQL Queries:
+In the phpMyAdmin interface, select the "studentreport" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
 
-In the phpMyAdmin interface, select the "studentreport" database.
-Go to the SQL tab and execute the following SQL queries to create the required tables:
-SQL QUERY: 
-CREATE TABLE Students ( 
-StudentID INT AUTO_INCREMENT PRIMARY KEY, 
-Name VARCHAR(255) NOT NULL, 
-CreditsEarned INT NOT NULL 
+```sql
+CREATE TABLE Students (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    CreditsEarned INT NOT NULL
 );
 
-CREATE TABLE Instructors ( 
-InstructorID INT AUTO_INCREMENT PRIMARY KEY, 
-Name VARCHAR(255) NOT NULL, 
-Department VARCHAR(255) NOT NULL 
+CREATE TABLE Instructors (
+    InstructorID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Department VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE Courses ( 
-CourseID INT AUTO_INCREMENT PRIMARY KEY, 
-CourseTitle VARCHAR(255) NOT NULL, 
-InstructorID INT, 
-FOREIGN KEY (InstructorID) REFERENCES Instructors(InstructorID) 
+CREATE TABLE Courses (
+    CourseID INT AUTO_INCREMENT PRIMARY KEY,
+    CourseTitle VARCHAR(255) NOT NULL,
+    InstructorID INT,
+    FOREIGN KEY (InstructorID) REFERENCES Instructors(InstructorID)
 );
 
-
-CREATE TABLE Enrollments ( 
-    EnrollmentID INT AUTO_INCREMENT PRIMARY KEY, 
-    StudentID INT, 
-    CourseID INT, 
-    Grade INT, 
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID), 
+CREATE TABLE Enrollments (
+    EnrollmentID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    Grade INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
     UNIQUE (StudentID, CourseID)
 );
+```
 
 
 Flask Setup
