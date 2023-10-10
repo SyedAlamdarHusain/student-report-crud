@@ -13,14 +13,16 @@ Before starting, make sure you have the following software installed on your sys
 ## Database Setup
 ### Install MySQL
 If you haven't already installed MySQL, download and install it from the official website.
+- [Download MYSQL](https://dev.mysql.com/downloads/installer/)
 
 ### XAMPP
 1. Download and install XAMPP from the official website.
-2. Start Apache and MySQL from XAMPP:
+- [Download XAMPP] (https://www.apachefriends.org/download.html)
+3. Start Apache and MySQL from XAMPP:
    - Launch XAMPP and start the Apache and MySQL services from the control panel.
-3. Access the Dashboard:
+4. Access the Dashboard:
    - Open your web browser and go to http://localhost/dashboard/ to access the XAMPP dashboard.
-4. Create a Database:
+5. Create a Database:
    - In the XAMPP dashboard, navigate to the phpMyAdmin section.
    - Click on "New" to create a new database called "studentreportsyedhusain"
 
