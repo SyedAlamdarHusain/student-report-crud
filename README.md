@@ -110,7 +110,10 @@ Go on App.py and navigate to the line 7 of code:
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreportsyedhusain'
 ```
 
-Change password after “root:” to your own password
+Change password after “root:” to your own password. If you haven't set up a password than leave it blank like this:
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/studentreportsyedhusain'
+```
 
 # Run Flask Application:
 
