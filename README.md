@@ -34,7 +34,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost
 
 # Run SQL Queries:
 
-In the phpMyAdmin interface, select the "studentreport" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
+In the phpMyAdmin interface, select the "syedhusainstudentreport" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
 
 ```sql
 CREATE TABLE Students (
