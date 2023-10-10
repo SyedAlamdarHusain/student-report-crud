@@ -17,7 +17,7 @@ If you haven't already installed MySQL, download and install it from the officia
 
 ### XAMPP
 1. Download and install XAMPP from the official website.
-- [Download XAMPP] (https://www.apachefriends.org/download.html)
+- [Download XAMPP](https://www.apachefriends.org/download.html)
 3. Start Apache and MySQL from XAMPP:
    - Launch XAMPP and start the Apache and MySQL services from the control panel.
 4. Access the Dashboard:
