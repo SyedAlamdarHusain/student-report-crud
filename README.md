@@ -103,25 +103,32 @@ pip install Flask-Cors
 # Edit App.py code:
 
 Go on App.py and navigate to the line 7 of code:
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
 
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
+```
 Change password after “root:” to your own password
 
-Run Flask Application:
+# Run Flask Application:
 
 Once all the libraries are installed, code is edited, and you are running on venv, run the Flask application using the following command:
 
+```bash
 flask run
+```
 
-Flask Run:
+# Flask Run:
 
 If you have error running flask make sure the libraries version matches the version on the requirements.txt
 
 run command:
+```python
 pip3 freeze > requirements.txt
+```
 
 Now compare and make sure that your versions matches this requirements list:
 
+```txt
 blinker==1.6.2
 click==8.1.7
 colorama==0.4.6
@@ -142,19 +149,24 @@ typing_extensions==4.8.0
 Werkzeug==3.0.0
 React Setup:
 Navigate to the React Folder:
+```
 
 Open a terminal or command prompt and navigate to the React project folder.
-Create a React App:
+
+# Create a React App:
 
 Run the following commands to create a new React app:
+```bash
 npx create-react-app myreactdev
+```
 
-Install React Libraries:
-Install the required React libraries using npm:
+# Install React Libraries:
+## Install the required React libraries using npm:
 
+```bash
 npm install react-router-dom --save 
 npm install axios --save
-
+```
 
 
 Run the React Application:
