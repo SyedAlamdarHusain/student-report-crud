@@ -172,4 +172,6 @@ npm install axios --save
 
 Run the React Application:
 Once all the libraries are installed, start the React development server with the following command:
+```bash
 npm start
+```
