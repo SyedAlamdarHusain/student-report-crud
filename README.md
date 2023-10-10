@@ -22,12 +22,13 @@ If you haven't already installed MySQL, download and install it from the officia
    - Open your web browser and go to http://localhost/dashboard/ to access the XAMPP dashboard.
 4. Create a Database:
    - In the XAMPP dashboard, navigate to the phpMyAdmin section.
-   - Click on "New" to create a new database called "studentreport."
+   - Click on "New" to create a new database called "studentreportsyedhusain"
 
 #### IF YOU WISH TO RENAME DATABASE:
-The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/studentreport` to something else if you wish to.
+The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/syedhusainstudentreport` to something else if you wish to.
 ```python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
+```
 
 
 Run SQL Queries:
