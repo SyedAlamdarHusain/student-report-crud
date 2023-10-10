@@ -73,13 +73,13 @@ CREATE TABLE Enrollments (
 Open a terminal or command prompt and navigate to the Flask project folder. Use the terminal for the IndividualAssignmentSource code.
 
 ```bash
-cd IndividualAssignmentSyedHusain\Flask_React_Crud
+cd IndividualAssignmentSyedHusain\Flask_App_Backend\Flask_React_Crud
 ```
 
 Check If there a another folder Flask_React_Crud inside IndividualAssignmentSourceCode\Flask_React_Crud
 If there is then do:
 ```bash
-cd IndividualAssignmentSyedHusain\Flask_React_Crud\Flask_React_Crud
+cd IndividualAssignmentSyedHusain\Flask_App_Backend\Flask_React_Crud\Flask_React_Crud
 ```
 
 # Create and Activate a Virtual Environment:
