@@ -1,5 +1,4 @@
-Video Tutorial of the CRUD App.
-https://www.youtube.com/watch?v=s5rXZN1cev4
+Video Tutorial of the CRUD App: https://www.youtube.com/watch?v=s5rXZN1cev4
 https://youtu.be/oq2P988w-MQ
 
 https://www.youtube.com/watch?v=AXv84fSaHH4
@@ -31,11 +30,6 @@ In the XAMPP dashboard, navigate to the phpMyAdmin section.
 Click on "New" to create a new database called "studentreport."
 
 
-
-
-
-
-
 IF YOU WISH TO RENAME DATABASE:
 
 The database could renamed to something else provided that change is implemented on the code on line:
@@ -65,6 +59,8 @@ CourseTitle VARCHAR(255) NOT NULL,
 InstructorID INT, 
 FOREIGN KEY (InstructorID) REFERENCES Instructors(InstructorID) 
 );
+
+
 CREATE TABLE Enrollments ( 
     EnrollmentID INT AUTO_INCREMENT PRIMARY KEY, 
     StudentID INT, 
