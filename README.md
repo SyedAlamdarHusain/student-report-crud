@@ -181,6 +181,11 @@ Once all the libraries are installed, start the React development server with th
 npm start
 ```
 
+# Successful Message
+
+If the react app was able to run successfully, you should see this message on the terminal
+
+```bash
 You can now view myreactdev in the browser.
 
   Local:            http://localhost:3000
@@ -190,3 +195,6 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+```
+
+Now you click on the local side directly to run the application on go to you browser and type `http://localhost:3000`.
