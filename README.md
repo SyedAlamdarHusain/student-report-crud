@@ -71,6 +71,7 @@ CREATE TABLE Enrollments (
     UNIQUE (StudentID, CourseID)
 );
 
+
 Flask Setup
 
 Navigate to the Flask Folder:
