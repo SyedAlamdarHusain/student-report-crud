@@ -1,7 +1,9 @@
-Video Tutorial of the CRUD App: https://www.youtube.com/watch?v=s5rXZN1cev4
+Video Tutorial of running the source code:
 https://youtu.be/oq2P988w-MQ
 
-https://www.youtube.com/watch?v=AXv84fSaHH4
+Video Tutorial of running the application:
+https://www.youtube.com/watch?v=s5rXZN1cev4
+
 Installation and Setup:
 
 Prerequisites
