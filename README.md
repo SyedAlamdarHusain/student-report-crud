@@ -27,7 +27,7 @@ If you haven't already installed MySQL, download and install it from the officia
 #### IF YOU WISH TO RENAME DATABASE:
 The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/syedhusainstudentreport` to something else if you wish to.
 ```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreport'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/syedhusainstudentreport'
 ```
 
 # Run SQL Queries:
