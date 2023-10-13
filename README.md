@@ -1,199 +1,27 @@
-# Video Tutorials
-- [Video Tutorial of running the source code](https://youtu.be/oq2P988w-MQ)
-- [Video Tutorial of running the application](https://www.youtube.com/watch?v=s5rXZN1cev4)
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xR-cYv8r)
+# project1
+Answer these questions please:
+Tell me what this project is about?
+Tell me how your thought process for completing the project?
+Any issues you came across?
 
-# Installation and Setup
-## Prerequisites
-Before starting, make sure you have the following software installed on your system:
-- MySQL
-- XAMPP
-- Python 3
-- Node.js
+## Project Info
 
-## Database Setup
-### Install MySQL
-If you haven't already installed MySQL, download and install it from the official website.
-- [Download MYSQL](https://dev.mysql.com/downloads/installer/)
+The code implements a simple linux shell to perform basic linux commands. The shell allows users to enter commands and executes them. The shell code provides features such as handling the "exit" command with optional status exit and processing the /proc command by displaying contents from the proc filesystem. Furthermore, the shell code provide history command feature to store all the commands the user enters in a hidden file called .421sh and displays the 10 most recent command when the user enters "history" command in user prompt from that hidden file.
 
-### XAMPP
-1. Download and install XAMPP from the official website.
-- [Download XAMPP](https://www.apachefriends.org/download.html)
-3. Start Apache and MySQL from XAMPP:
-   - Launch XAMPP and start the Apache and MySQL services from the control panel.
-4. Access the Dashboard:
-   - Open your web browser and go to http://localhost/dashboard/ to access the XAMPP dashboard.
-5. Create a Database:
-   - In the XAMPP dashboard, navigate to the phpMyAdmin section.
-   - Click on "New" to create a new database called "studentreportsyedhusain"
+## Thought Process
 
-#### IF YOU WISH TO RENAME DATABASE:
-The database could be renamed to something else, provided that the change is implemented in the code on line 7 of `App.py`. Navigate to line 7 of the code and change `/studentreportsyedhusain` to something else if you wish to.
-```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreportsyedhusain'
-```
+My thought process for completing this project was to complete the project in parts. First, I focused on obtaining the `user_prompt_loop`. After completing that, I moved on to parsing and execution. Once these stages were finished, I proceeded to work on the `proc` command system. I then implemented the history command functionality. When the core functionality was fully developed, I tackled the exit shell command by freeing all allocated memory. 
 
-# Run SQL Queries:
+## Issues that I came across and the ways I solved it
+During this process, I encountered an issue where the `free` command failed to execute when exiting, leading to a memory leak. To address this, I made the command a global variable. Another memory leak issue occurred when I entered an invalid command, and the forked process was terminated, leaving memory still reachable. To solve this problem, I implemented `free` memory just before the process termination.
 
-In the phpMyAdmin interface, select the "studentreportsyedhusain" database. Go to the SQL tab and execute the following SQL queries to create the required tables:
+## Assumptions in the Code
 
-```sql
-CREATE TABLE Students (
-    StudentID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(255) NOT NULL,
-    CreditsEarned INT NOT NULL
-);
+- The `proc` command would be run as `proc` instead of `/proc` as originally shown in the output of the Project 1 file. Thus with command for environ, status, and sched, the proc can be run as: proc /pid/environ. While command for cpuinfo and loavag can be run as either proc /cpuinfo or proc cpuinfo.  
+- The `history` command would show the most recent command from the bottom, as it is done in bash.
+- The PID from top & can be run as usual. However, any other PID which isn't from top & may need to be run as sudo to grant access priviledge for the program to read from proc file.
 
-CREATE TABLE Instructors (
-    InstructorID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(255) NOT NULL,
-    Department VARCHAR(255) NOT NULL
-);
+## Extra Credit
 
-CREATE TABLE Courses (
-    CourseID INT AUTO_INCREMENT PRIMARY KEY,
-    CourseTitle VARCHAR(255) NOT NULL,
-    InstructorID INT,
-    FOREIGN KEY (InstructorID) REFERENCES Instructors(InstructorID)
-);
-
-CREATE TABLE Enrollments (
-    EnrollmentID INT AUTO_INCREMENT PRIMARY KEY,
-    StudentID INT,
-    CourseID INT,
-    Grade INT,
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID),
-    UNIQUE (StudentID, CourseID)
-);
-```
-# Flask Setup
-
-## Navigate to the Flask Folder:
-
-Open a terminal or command prompt and navigate to the Flask project folder. Use the terminal for the IndividualAssignmentSource code.
-
-```bash
-cd IndividualAssignmentSyedHusain\Flask_App_Backend\Flask_React_Crud
-```
-
-Check If there a another folder Flask_React_Crud inside IndividualAssignmentSourceCode\Flask_React_Crud
-If there is then do:
-```bash
-cd IndividualAssignmentSyedHusain\Flask_App_Backend\Flask_React_Crud\Flask_React_Crud
-```
-
-# Create and Activate a Virtual Environment:
-
-## Run the following commands in the terminal:
-
-```bash
-py -3 -m venv venv
-venv\Scripts\activate
-```
-
-# Install Python Libraries:
-## Install the required Python libraries using pip:
-
-```bash
-pip install Flask
-pip install pymysql
-pip install -U Flask-SQLAlchemy
-pip install flask-marshmallow
-pip install Flask-Cors
-```
-
-# Edit App.py code:
-
-Go on App.py and navigate to the line 7 of code:
-
-```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/studentreportsyedhusain'
-```
-
-Change password after “root:” to your own password. If you haven't set up a password than leave it blank like this:
-```python
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/studentreportsyedhusain'
-```
-
-# Run Flask Application:
-
-Once all the libraries are installed, code is edited, and you are running on venv, run the Flask application using the following command:
-
-```bash
-flask run
-```
-
-# Version Dependencies:
-
-If you have error running flask make sure the libraries version matches the version on the requirements.txt
-
-run command:
-```python
-pip3 freeze > requirements.txt
-```
-
-Now compare and make sure that your versions matches this requirements list:
-
-```txt
-blinker==1.6.2
-click==8.1.7
-colorama==0.4.6
-Flask==3.0.0
-Flask-Cors==4.0.0
-flask-marshmallow==0.15.0
-Flask-SQLAlchemy==3.1.1
-greenlet==3.0.0
-gunicorn==21.2.0
-itsdangerous==2.1.2
-Jinja2==3.1.2
-MarkupSafe==2.1.3
-marshmallow==3.20.1
-packaging==23.2
-PyMySQL==1.1.0
-SQLAlchemy==2.0.21
-typing_extensions==4.8.0
-Werkzeug==3.0.0
-React Setup:
-Navigate to the React Folder:
-```
-
-Open a terminal or command prompt and navigate to the React project folder.
-
-# Create a React App:
-
-Run the following commands to create a new React app:
-```bash
-npx create-react-app myreactdev
-```
-
-# Install React Libraries:
-## Install the required React libraries using npm:
-
-```bash
-npm install react-router-dom --save 
-npm install axios --save
-```
-
-
-# Run the React Application:
-Once all the libraries are installed, start the React development server with the following command:
-```bash
-npm start
-```
-
-# Using Application 
-If the react app was able to run successfully, you should see this message on the terminal
-
-```bash
-You can now view myreactdev in the browser.
-
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.56.1:3000
-
-Note that the development build is not optimized.
-To create a production build, use npm run build.
-
-webpack compiled successfully
-```
-
-Now you click on the local side directly to run the application on go to you browser and type `http://localhost:3000`.
+- Project was Submitted on Oct 10 (5 days - 5 points). 
