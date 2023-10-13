@@ -18,9 +18,9 @@ During this process, I encountered an issue where the `free` command failed to e
 
 ## Assumptions in the Code
 
-- The `proc` command would be run as `proc` instead of `/proc` as originally shown in the output of the Project 1 file. Thus, with command for environ, status, and sched, the proc can be run as: proc /pid/environ. While commands for cpuinfo and loavag can be run as either proc /cpuinfo or proc cpuinfo.  
-- The `history` command would show the most recent command from the bottom, as it is done in bash.
-- The PID from top command which is shown after running "top &" on the terminal can be run as usual. However, any other PID which isn't from top command may need to be run as sudo to grant access priviledge for the program to read from proc file.
+- The `proc` command should be executed simply as `proc` rather than `/proc` as initially indicated in the Project 1 file's output. Therefore, for the `environ`, `status`, and `sched` commands, `proc` can be used in the following format: `proc /pid/environ`. As for the `cpuinfo` and `loadavg` commands, they can be executed as `proc /cpuinfo` or `proc cpuinfo`. 
+- The `history` command would show the most recent commands from the bottom, as it is done in bash.
+- The PID receieved from running the top command which is shown after running `top &` on the background from another terminal can be run as usual. However, any other PID which isn't from top command may need to be run as `sudo` to grant access priviledge for the program to read from proc file.
 - The proc shows error message to invalid proc command as "Unable to open the proc file". This error can be due to both an invalid command for proc as well due to access priviledge for proc file that wasn't able to open due to not having root privilege.
 - Exit command that is run with a status displays the status that code existed from. Whereas an invalid command for exit shows as error message that there was a invalid argument for exit. 
 
