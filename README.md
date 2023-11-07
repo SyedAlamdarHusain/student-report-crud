@@ -12,10 +12,16 @@ make
 ./PrimaryLikesServer
 ```
 
-## Then run ParentProcess as:
+## Then run ParentProcess on a separate terminal as:
 
 ```bash
 ./ParentProcess
+```
+
+## tail -f
+As highlighted in project doc, tail -f can be run on another terminal optionally to check log output on real time as the PrimaryLikesServer and ParentProcess are running in real time:
+```bash
+tail -f /tmp/PrimaryLikesLog
 ```
 
 ## Submission Date:
@@ -39,7 +45,7 @@ The log file contains the starting time of each child fork and it ends with stat
 
 ### PrimaryLikesLog
 
-The /tmp/PrimaryLikesLog should be open as:
+The /tmp/PrimaryLikesLog should be open on as:
 ```bash
 cat /tmp/PrimaryLikesLog
 ```
