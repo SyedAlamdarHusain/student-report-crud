@@ -22,7 +22,7 @@ make
 As highlighted in project doc, tail -f can be run on another terminal optionally to check log output on real time as the PrimaryLikesServer and ParentProcess are running in real time:
 ```bash
 tail -f /tmp/PrimaryLikesLog
-```
+``` 
 
 ## Submission Date:
 
