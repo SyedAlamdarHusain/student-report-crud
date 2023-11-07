@@ -45,8 +45,6 @@ cat /tmp/ParentProcessStatus
 ```
 The log file contains the starting time of each child fork and the ending time along with the status code 0 indicating success and 1 indicating failure. The log file also contains any connection or receive error that a LikesServer gets and the likeserver number it came from.
 
-The log contains the start and end times of each child fork, along with status codes (0 for success, 1 for failure). It also includes any connection or receive errors encountered by LikesServers and the respective LikesServer number.
-
 ## PrimaryLikesLog
 
 The /tmp/PrimaryLikesLog should be open as:
@@ -55,17 +53,13 @@ cat /tmp/PrimaryLikesLog
 ```
 The log file contains each successful like sent from LikesServer to PrimaryLikesServer and the total-like-counter that is updated after each like sent. If invalid data is passed it simply logs "Invalid data" followed by the data passed and doesn't increment the total likes.
 
-The log file logs each successful like sent from LikesServer to PrimaryLikesServer and updates the total like count. In case of invalid data passed, it logs "Invalid data" along with the data passed, without incrementing the total likes count.
-
 ## LikesServerLog
 
 The /tmp/LikesServer should be open as:
 ```bash
 cat /tmp/LikesServer0
 ```
-The like server log file contains the number of likes sent in its running period and the return code from the IPS to the PrimaryLikesServer with 0 if successful and 1 if it was unsuccessful for each like send. The like server log file also logs specific errors received by the like server. 
-
-The log file includes the number of likes sent during the server's running period, the return code from the IPS to the PrimaryLikesServer (0 for success, 1 for failure). The like server log file also logs specific errors received by the like server. 
+The like server log file contains the number of likes sent in its running period and the return code from the IPS to the PrimaryLikesServer with 0 if successful and 1 if it was unsuccessful for each like sent. The like server log file also logs specific errors received by the like server. 
 
 
 
