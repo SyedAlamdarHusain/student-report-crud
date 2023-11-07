@@ -1,3 +1,63 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/_fBs5sT8)
+
+# Running The Program:
+
+```bash
+make
+```
+
+## First run the PrimaryLikesServer as
+
+```bash
+./PrimaryLikesServer
+```
+
+## Then run ParentProcess as:
+
+```bash
+./ParentProcess
+```
+
+## Submission Date:
+
+Project Submitted on November 6 (Five Days EC):
+
+
+## Implementation:
+First I implemented ParentProcess to fork 10 child processes, then I implemented sockets by passing a single like between ParentProcess and PrimaryLikesServer once that was successful, I implemented Likeserver function where each LikesServer is forked one second before the previous child and sends a random number of likes between 0 and 42 to PrimaryLikesServer over 5 minutes with  1 to 5 random interval, finally once the data was transfer back I implemented bi-directional connection by PrimaryLikesServer responding back based on if data transfer was successful
+
+## Things to notice:
+
+### ParentProcess Status
+
+The /tmp/ParentProcessStatus should be open as:
+```bash
+cat /tmp/ParentProcessStatus
+```
+The log file contains the starting time of each child fork and it ends with status code 0 indicating sucess and 1 indicating failure. The log file also contains any connection or receive error that a LikesServer get and likeserver it came from.
+
+
+### PrimaryLikesLog
+
+The /tmp/PrimaryLikesLog should be open as:
+```bash
+cat /tmp/PrimaryLikesLog
+```
+The log file contains each like successful like send from LikesServer to PrimaryLikesServer as well the total like counter that is updated after each like send. If an invalid data is passed it simply log Invalid data followed by the data passed and doesn't increment the total likes
+
+### LikesServerLog
+
+The /tmp/LikesServer should be open as:
+```bash
+cat /tmp/LikesServer0
+```
+The likeserver log file contains the number of likes send in it's running period and return code from the IPS to the PrimaryLikesServer with 0 if successful and 1 if uncessfull for each like send. The likeserver log file also log specific error received by the likeserver. 
+
+
+
+
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xR-cYv8r)
 # project1
 Answer these questions please:
