@@ -30,7 +30,7 @@ tail -f /tmp/PrimaryLikesLog
 
 # Submission Date:
 
-Project Submitted with Five Days of Extra Credit: The GitHub pull date is November 7.
+Project Submitted with Five Days of Extra Credit: The GitHub pull date is November 7(Last Commit on November 7).
 
 
 # Implementation:
