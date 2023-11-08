@@ -22,7 +22,7 @@ make
 
 ## Real-Time Log Monitoring (Optional):
 
-To monitor log output in real-time while the PrimaryLikesServer and ParentProcess are running in separate terminals, you can use the tail -f command, as described in the project documentation:
+To monitor log output in real-time while the PrimaryLikesServer and ParentProcess are running in separate terminals, tail -f command can be used, as described in the project documentation on a separate terminal as:
 ```bash
 tail -f /tmp/PrimaryLikesLog
 ``` 
