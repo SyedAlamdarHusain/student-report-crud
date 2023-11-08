@@ -30,7 +30,7 @@ tail -f /tmp/PrimaryLikesLog
 
 # Submission Date:
 
-Project Submitted on November 7 (Five Days Extra Credit): The date to pull from GitHub in your README is November 7.
+Project Submitted with Five Days of Extra Credit: The GitHub pull date is November 7.
 
 
 # Implementation:
