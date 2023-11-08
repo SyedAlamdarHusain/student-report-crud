@@ -65,3 +65,4 @@ The /tmp/LikesServer should be open as:
 ```bash
 cat /tmp/LikesServer0
 ```
+The Likeserver log file includes the number of likes sent during its running period and the return code from the IPS to the PrimaryLikesServer, which is 0 for successful and 1 for unsuccessful "like" transmissions. The Likeserver log file also logs specific errors received by the Likeserver.
