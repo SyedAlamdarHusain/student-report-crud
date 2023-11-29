@@ -16,7 +16,7 @@ sudo insmod magic8ball.ko
 sudo rmmod magic8ball
 ```
 
-# Reading from the device
+# Reading from the character device
 
 ```bash
 cat /dev/magic8ball
