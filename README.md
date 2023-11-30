@@ -1,3 +1,176 @@
+# Blackjack:
+
+## Guide to Compile, Load, Unload, and Run the Module
+
+### Compile
+
+```bash
+make
+```
+
+### Loading the module
+
+```bash
+sudo insmod blackjack.ko
+```
+
+### Writing to the character device
+
+Any of these formats could be used to write to the blackjack
+
+```bash
+echo "Reset" > /dev/blackjack
+```
+
+```bash
+echo "Shuffle" > /dev/blackjack
+```
+
+```bash
+echo "Hit" > /dev/blackjack
+```
+
+#### Both Hold or No command could be used in reponse to Not wanting to add another card to player hand
+
+```bash
+echo "No" > /dev/blackjack
+```
+
+```bash
+echo "Hold" > /dev/blackjack
+```
+
+#### When choosing to keep the same deck, the user is required to shuffle
+
+```bash
+echo "Shuffle" > /dev/blackjack
+```
+
+#### When choosing to not keep the same deck, the user is required to reset
+
+```bash
+echo "Reset" > /dev/blackjack
+```
+
+### Reading from the character device
+
+```bash
+cat /dev/blackjack
+```
+
+### Unloading the module
+
+```bash
+sudo rmmod blackjack
+```
+
+
+## Implementation:
+
+First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read and write function that provides ability to read and write to character device. Then I moved on implementing basic helper function to reset and shuffle cards. Then I moved to implementing deal function by dealing two cards to player and dealer. Then I moved on implementing HIT to add cards to player, then finally I moved on to HOLD function to implement Dealer's gameplay. Finally, once i was done with basic functionality, I moved on adding functionality for the types of card and then on handling aces. Finally, I moved on implementing winning condition. Once first round was implemented. I implemented functionality for second round when user chooses to use a new desk where I reset the game and then implemented functionality to next rounds where user chooses to play with the same deck by setting player and healer points to zero. Finally, when the basic game was done, I implemented error checking for invalid response and invalid commands.
+
+
+## Challenges and Solutions:
+
+The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ, WRITE function for the module by  using.mode that helped me load the module without mknod and able the make the module being able read and write by user without need to have root/owner privileges. Next, the biggest challenge was making sure user enter correct command for each response. To tackle, I implemented bool variables that check each condition and set to true or false when they are done or needed to make sure each valid command is entered only when it's needed.
+
+
+
+# Magic8ball
+
+
+## Guide to compile, load, unload and read the character device:
+
+
+### Reading from the character device
+
+```bash
+cat /dev/magic8ball
+```
+
+
+### Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+### Compile
+
+```bash
+make
+```
+
+### Loading the module
+
+```bash
+sudo insmod magic8ball.ko
+```
+
+### Reading from the character device
+
+```bash
+cat /dev/magic8ball
+```
+
+### Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+## Implementation:
+
+First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read that provides user ability to read from the character device. Then I moved on implementing for the module to randomize the responses each time the user opens and tries to read from the character device
+
+## Challenges and Solutions:
+
+The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ for the module by using ".mode" that helped me load the module without mknod and able the make the module being able read by user without need to have root/owner privileges.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Guide to Compile, Load, Unload, and Run the Module
 
 ## Compile
