@@ -1,4 +1,4 @@
-# Guid to Compile, Load, Unload, and Run the Module
+# Guide to Compile, Load, Unload, and Run the Module
 
 ## Compile
 
@@ -61,6 +61,12 @@ cat /dev/blackjack
 ```bash
 sudo rmmod blackjack
 ```
+
+
+
+
+
+
 
 
 
