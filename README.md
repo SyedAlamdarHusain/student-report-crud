@@ -1,4 +1,4 @@
-# Guid to Compile, Load and Run the Module
+# Guid to Compile, Load, Unload, and Run the Module
 
 ## Compile
 
