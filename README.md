@@ -77,6 +77,8 @@ The biggest challenges I was facing was that I wasn't able to add character with
 
 
 
+# Guide to compile, load, unload and read the character device:
+
 
 # Reading from the character device
 
@@ -103,18 +105,25 @@ make
 sudo insmod magic8ball.ko
 ```
 
-# Unloading the module
-
-```bash
-sudo rmmod magic8ball
-```
-
 # Reading from the character device
 
 ```bash
 cat /dev/magic8ball
 ```
 
+# Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+# Implementation:
+
+First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read that provides user ability to read from the character device. Then I moved on implementing for the module to randomize the responses each time the user opens and tries to read from the character device
+
+# Challenges and Solutions:
+
+The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ for the module by using ".mode" that helped me load the module without mknod and able the make the module being able read by user without need to have root/owner privileges.
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/_fBs5sT8)
