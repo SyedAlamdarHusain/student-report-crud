@@ -35,7 +35,7 @@ echo "No" > /dev/blackjack
 ```
 
 ```bash
-echo "Hold" 
+echo "Hold" > /dev/blackjack
 ```
 
 ### When choosing to keep the same deck, the user is required to shuffle
@@ -63,7 +63,14 @@ sudo rmmod blackjack
 ```
 
 
+# Implementation:
 
+First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read and write function that provides ability to read and write to character device. Then I moved on implementing basic helper function to reset and shuffle cards. Then I moved to implementing deal function by dealing two cards to player and dealer. Then I moved on implementing HIT to add cards to player, then finally I moved on to HOLD function to implement Dealer's gameplay. Finally, once i was done with basic functionality, I moved on adding functionality for the types of card and then on handling aces. Finally, I moved on implementing winning condition. Once first round was implemented. I implemented functionality for second round when user chooses to use a new desk where I reset the game and then implemented functionality to next rounds where user chooses to play with the same deck by setting player and healer points to zero. Finally, when the basic game was done, I implemented error checking for invalid response and invalid commands.
+
+
+# Challenges and Solutions:
+
+The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ, WRITE function for the module by  using.mode that helped me load the module without mknod and able the make the module being able read and write by user without need to have root/owner privileges. Next, the biggest challenge was making sure user enter correct command for each response. To tackle, I implemented bool variables that check each condition and set to true or false when they are done or needed to make sure each valid command is entered only when it's needed.
 
 
 
