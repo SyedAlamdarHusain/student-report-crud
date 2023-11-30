@@ -80,38 +80,38 @@ The biggest challenges I was facing was that I wasn't able to add character with
 # Guide to compile, load, unload and read the character device:
 
 
-# Reading from the character device
+## Reading from the character device
 
 ```bash
 cat /dev/magic8ball
 ```
 
 
-# Unloading the module
+## Unloading the module
 
 ```bash
 sudo rmmod magic8ball
 ```
 
-# Compile
+## Compile
 
 ```bash
 make
 ```
 
-# Loading the module
+## Loading the module
 
 ```bash
 sudo insmod magic8ball.ko
 ```
 
-# Reading from the character device
+## Reading from the character device
 
 ```bash
 cat /dev/magic8ball
 ```
 
-# Unloading the module
+## Unloading the module
 
 ```bash
 sudo rmmod magic8ball
