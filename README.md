@@ -1,16 +1,18 @@
-# Compile
+# Guid to Compile, Load and Run the Module
+
+## Compile
 
 ```bash
 make
 ```
 
-# Loading the module
+## Loading the module
 
 ```bash
 sudo insmod blackjack.ko
 ```
 
-# Writing to the character device
+## Writing to the character device
 
 Any of these formats could be used to write to the blackjack
 
@@ -26,7 +28,7 @@ echo "Shuffle" > /dev/blackjack
 echo "Hit" > /dev/blackjack
 ```
 
-## Both Hold or No command could be used in reponse to Not wanting to add another card to player hand
+### Both Hold or No command could be used in reponse to Not wanting to add another card to player hand
 
 ```bash
 echo "No" > /dev/blackjack
@@ -36,25 +38,25 @@ echo "No" > /dev/blackjack
 echo "Hold" 
 ```
 
-## When choosing to keep the same deck, the user is required to shuffle
+### When choosing to keep the same deck, the user is required to shuffle
 
 ```bash
 echo "Shuffle" > /dev/blackjack
 ```
 
-## When choosing to not keep the same deck, the user is required to reset
+### When choosing to not keep the same deck, the user is required to reset
 
 ```bash
 echo "Reset" > /dev/blackjack
 ```
 
-# Reading from the character device
+## Reading from the character device
 
 ```bash
 cat /dev/blackjack
 ```
 
-# Unloading the module
+## Unloading the module
 
 ```bash
 sudo rmmod blackjack
