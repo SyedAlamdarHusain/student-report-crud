@@ -1,3 +1,55 @@
+# Magic8ball:
+
+
+## Guide to compile, load, unload and read the character device:
+
+
+### Reading from the character device
+
+```bash
+cat /dev/magic8ball
+```
+
+
+### Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+### Compile
+
+```bash
+make
+```
+
+### Loading the module
+
+```bash
+sudo insmod magic8ball.ko
+```
+
+### Reading from the character device
+
+```bash
+cat /dev/magic8ball
+```
+
+### Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+## Implementation:
+
+First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read that provides user ability to read from the character device. Then I moved on implementing for the module to randomize the responses each time the user opens and tries to read from the character device
+
+## Challenges and Solutions:
+
+The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ for the module by using ".mode" that helped me load the module without mknod and able the make the module being able read by user without need to have root/owner privileges.
+
+
 # Blackjack:
 
 ## Guide to Compile, Load, Unload, and Run the Module
@@ -73,67 +125,6 @@ First I implemented the basic module to be able to load and unloaded. Once it wa
 ## Challenges and Solutions:
 
 The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ, WRITE function for the module by  using.mode that helped me load the module without mknod and able the make the module being able read and write by user without need to have root/owner privileges. Next, the biggest challenge was making sure user enter correct command for each response. To tackle, I implemented bool variables that check each condition and set to true or false when they are done or needed to make sure each valid command is entered only when it's needed.
-
-
-
-# Magic8ball
-
-
-## Guide to compile, load, unload and read the character device:
-
-
-### Reading from the character device
-
-```bash
-cat /dev/magic8ball
-```
-
-
-### Unloading the module
-
-```bash
-sudo rmmod magic8ball
-```
-
-### Compile
-
-```bash
-make
-```
-
-### Loading the module
-
-```bash
-sudo insmod magic8ball.ko
-```
-
-### Reading from the character device
-
-```bash
-cat /dev/magic8ball
-```
-
-### Unloading the module
-
-```bash
-sudo rmmod magic8ball
-```
-
-## Implementation:
-
-First I implemented the basic module to be able to load and unloaded. Once it was working, I moved to implement basic read that provides user ability to read from the character device. Then I moved on implementing for the module to randomize the responses each time the user opens and tries to read from the character device
-
-## Challenges and Solutions:
-
-The biggest challenges I was facing was that I wasn't able to add character without using mknod. To resolve this, I implemented READ for the module by using ".mode" that helped me load the module without mknod and able the make the module being able read by user without need to have root/owner privileges.
-
-
-
-
-
-
-
-
 
 
 
