@@ -7,6 +7,84 @@ make
 # Loading the module
 
 ```bash
+sudo insmod blackjack.ko
+```
+
+# Writing to the character device
+
+Any of these formats could be used to write to the blackjack
+
+```bash
+echo "Reset" > /dev/blackjack
+```
+
+```bash
+echo "Shuffle" > /dev/blackjack
+```
+
+```bash
+echo "Hit" > /dev/blackjack
+```
+
+## Both Hold or No command could be used in reponse to Not wanting to add another card to player hand
+
+```bash
+echo "No" > /dev/blackjack
+```
+
+```bash
+echo "Hold" 
+```
+
+## When choosing to keep the same deck, the user is required to shuffle
+
+```bash
+echo "Shuffle" > /dev/blackjack
+```
+
+## When choosing to not keep the same deck, the user is required to reset
+
+```bash
+echo "Reset" > /dev/blackjack
+```
+
+# Reading from the character device
+
+```bash
+cat /dev/blackjack
+```
+
+# Unloading the module
+
+```bash
+sudo rmmod blackjack
+```
+
+
+
+
+# Reading from the character device
+
+```bash
+cat /dev/magic8ball
+```
+
+
+# Unloading the module
+
+```bash
+sudo rmmod magic8ball
+```
+
+# Compile
+
+```bash
+make
+```
+
+# Loading the module
+
+```bash
 sudo insmod magic8ball.ko
 ```
 
